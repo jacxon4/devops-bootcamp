@@ -25,6 +25,8 @@ Run
 > To run this command you will need make the script executable by
 > `chmod +x exercise3`
 
+> :warning: **This sentence will delete /foo folder**
+
 Run
 
 > `./exercise3`
