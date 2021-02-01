@@ -1,0 +1,4 @@
+#!/bin/sh
+
+curl -s https://www.lipsum.com/ > loremIpsumFile.txt
+grep -on "$1" loremIpsumFile.txt
