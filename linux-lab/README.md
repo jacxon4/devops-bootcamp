@@ -29,4 +29,4 @@ Run
 
 Run
 
-> `./exercise3`
+> `./exercise3 "THIS TEXT WILL BE STDOUT TO FILE"`

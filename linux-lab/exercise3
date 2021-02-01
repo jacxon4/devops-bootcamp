@@ -4,5 +4,5 @@
 dummyPath="./foo/dummy"
 emptyPath="./foo/empty/"
 rm -r foo
-./treeBuild $dummyPath $emptyPath ""
+./treeBuild $dummyPath $emptyPath "$1"
 ./exercise2

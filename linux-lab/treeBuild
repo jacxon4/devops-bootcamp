@@ -2,6 +2,6 @@
 
 strToEcho="${3:-"Que me gusta la bash!!!!"}"
 
-mkdir -p "$(dirname $1/file1.txt)" && touch $1/file1.txt | echo $strToEcho >> "$1"/file1.txt ; 
-mkdir -p "$(dirname $1/file2.txt)" && touch $1/file2.txt
-mkdir $2
+mkdir -p "$(dirname "$1"/file1.txt)" && touch "$1"/file1.txt | echo $strToEcho >> "$1"/file1.txt ; 
+mkdir -p "$(dirname "$1"/file2.txt)" && touch "$1"/file2.txt
+mkdir "$2"
