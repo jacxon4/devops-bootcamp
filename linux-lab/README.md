@@ -30,3 +30,13 @@ Run
 Run
 
 > `./exercise3 "THIS TEXT WILL BE STDOUT TO FILE"`
+
+### Exercise 3
+
+> To run this command you will need make the script executable by
+> `chmod +x exercise4`
+
+The execution will retrieve [Lorem Ipsum page](https://www.lipsum.com/) and search the text provided as parameter
+Run
+
+> `./exercise4 "THIS TEXT WILL BE SEARCH"`
