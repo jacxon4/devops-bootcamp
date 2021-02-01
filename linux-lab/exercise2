@@ -1,0 +1,12 @@
+#!/bin/sh
+
+copyContent(){
+
+    cat $1/file1.txt > $1/file2.txt
+    mv $1/file2.txt $2
+}
+
+## Main script
+dummyPath="./foo/dummy"
+emptyPath="./foo/empty/"
+copyContent $dummyPath $emptyPath
