@@ -1,0 +1,8 @@
+#!/bin/sh
+
+## Main script
+dummyPath="./foo/dummy"
+emptyPath="./foo/empty/"
+rm -r foo
+./treeBuild $dummyPath $emptyPath ""
+./exercise2

@@ -1,0 +1,7 @@
+#!/bin/sh
+
+## Main script
+dummyPath="./foo/dummy"
+emptyPath="./foo/empty/"
+chmod +x ./treeBuild
+./treeBuild $dummyPath $emptyPath "Me encanta la bash!!"
