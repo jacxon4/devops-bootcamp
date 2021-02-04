@@ -9,6 +9,7 @@ RUN dotnet publish -c Release -o out
 
 FROM base AS runtime
 COPY --from=builder /app/out .
-EXPOSE 80
-ENV MONGO_URI=mongodb:27017
+EXPOSE 5000
+ENV ASPNETCORE_URLS=http://*:5000
+ENV MONGO_URI=mongodb://mongodb:27017
 ENTRYPOINT ["dotnet", "backend.dll"]
