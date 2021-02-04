@@ -11,5 +11,4 @@ FROM base AS runtime
 COPY --from=builder /app/out .
 EXPOSE 5000
 ENV ASPNETCORE_URLS=http://*:5000
-ENV MONGO_URI=mongodb://mongodb:27017
 ENTRYPOINT ["dotnet", "backend.dll"]
