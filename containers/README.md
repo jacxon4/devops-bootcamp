@@ -4,6 +4,6 @@ Each exercise enuntiate can be found on `exercises.pdf` file
 
 ## Exercise 1
 
-Run `exercise1.sh` on your terminal.
+> Note: Adding execution permisions may be required. Run `chmod +x exercise1` to do so
 
-> Note: Adding execution permisions may be required. Run `chmod +x exercise1.sh` to do so
+Run `./exercise1` on your terminal. Now you can oppen [http://localhost:3000](http://localhost:3000)

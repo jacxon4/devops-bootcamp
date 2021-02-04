@@ -11,19 +11,20 @@ docker network create lemoncode-challenge
 
 # Recreate container
 echo "####### Run mongo DB #######"
+docker volume create mongo-volmongo
 docker rm mongodb -f
 docker run -itd --name mongodb --network lemoncode-challenge --mount source=mongo-volmongo,target=/data/db -p 27017:27017 mongo
 
 
 #Create backend image
 echo "####### Create backend #######"
-cd backend
+cd backend/backend
 docker build . -t dotnet-backend
-cd ..
+cd ../../
 
 # Recreate container
-docker rm dotnet-backend -f
-docker run -itd --name dotnet-backend -p 5000:80 --network lemoncode-challenge dotnet-backend
+docker rm backend -f
+docker run -d --name backend -p 5000:5000 --network lemoncode-challenge dotnet-backend
 
 #Ensure container into newtork
 docker network inspect lemoncode-challenge | grep dotnet-backend
@@ -34,7 +35,7 @@ cd frontend
 docker build . -t react-frontend
 
 # Recreate container
-docker rm react-frontend -f
-docker run -itd --name react-frontend -p 3000:3000 --network lemoncode-challenge react-frontend
+docker rm frontend -f
+docker run -d --name frontend -p 3000:3000 --network lemoncode-challenge react-frontend
 cd ..
 
